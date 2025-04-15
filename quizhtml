@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz</h1>
+
+        <!-- Question Adding Section -->
+        <section class="add-question">
+            <h2>Add a New Question</h2>
+            <input type="text" id="question" placeholder="Enter your question">
+            <input type="text" id="option1" placeholder="Option 1">
+            <input type="text" id="option2" placeholder="Option 2">
+            <input type="text" id="option3" placeholder="Option 3">
+            <input type="text" id="option4" placeholder="Option 4">
+            <input type="number" id="correctOption" placeholder="Correct Option (1-4)">
+            <button onclick="addQuestion()">Add Question</button>
+        </section>
+
+        <!-- Questions List -->
+        <section class="questions-list">
+            <h2>Questions List</h2>
+            <ul id="questionsList"></ul>
+        </section>
+
+        <!-- Quiz Section  -->
+        <section class="quiz-container">
+            <h2>Start the Quiz</h2>
+            <button onclick="startQuiz()">Start</button>
+            <div id="quizSection">
+                <p id="quizQuestion"></p>
+                <div id="quizOptions"></div>
+                <button onclick="nextQuestion()">➡ Next</button>
+            </div>
+            <p id="result"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
